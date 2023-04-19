@@ -40,9 +40,10 @@ function App() {
                 e.preventDefault();
                   if(editID)
                      {
+
                           const afterChange=todoList.map((curr,index)=>
                                                   {
-                                                     return editID===index?{title:note.title,note:note.note}:curr;
+                                                     return editID-1===index?{title:note.title,note:note.note}:curr;
                                                   } );
                           setNote({
                                  title:'',
@@ -52,7 +53,7 @@ function App() {
                           setEditID(0);                     
                      }
                  else{
-                       setTodolist([note,...todoList]);
+                       setTodolist([...todoList,note]);
                        setNote({title:'',note:''});
                      }
                }
