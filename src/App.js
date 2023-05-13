@@ -57,7 +57,9 @@ function App() {
                        setNote({title:'',note:''});
                      }
                }
-           
+           else{
+                 e.preventDefault();
+                 alert("Please add your note's title and note");
 
          }
   function onDelete(id)
