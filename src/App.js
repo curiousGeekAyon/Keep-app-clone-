@@ -60,7 +60,7 @@ function App() {
            else{
                  e.preventDefault();
                  alert("Please add your note's title and note");
-
+              }
          }
   function onDelete(id)
           {
